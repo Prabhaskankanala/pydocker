@@ -5,7 +5,8 @@ FROM python:3.11-slim-buster
 WORKDIR /app
 
 # Copy the application code
-COPY . .
+COPY ./app /app
+
 
 # Expose the port the app will run on
 #EXPOSE 5000
