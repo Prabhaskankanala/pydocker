@@ -11,4 +11,4 @@ COPY . .
 #EXPOSE 5000
 
 # Define the command to run the application
-CMD ["python", "pydocker.py"]
+CMD ["python", "pydocker"]
