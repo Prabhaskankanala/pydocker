@@ -1,14 +1,14 @@
 # Use a Python base image
-FROM python:3.9-slim
+FROM python:3.11-slim-buster
 
 # Set the working directory
 WORKDIR /app
 
-# Copy the Python app into the container
-COPY ./app.py /app/
+# Copy the application code (if it's in the root directory of the repo)
+COPY . /app
 
-# Install any dependencies (if needed)
-RUN pip install -r requirements.txt
+# Install any dependencies (if a requirements.txt exists)
+# RUN pip install -r requirements.txt
 
-# Set the command to run the app
-CMD ["python", "app.py"]
+# Run the application
+CMD ["python", "sample.py"]
